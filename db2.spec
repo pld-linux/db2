@@ -70,7 +70,7 @@ use Berkeley DB.
 %patch1 -p1
 
 %build
-%{__make} CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -I. -I./include -include ./compat.h"
+%{__make} CFLAGS="%{rpmcflags} -I. -I./include -include ./compat.h"
 
 %install
 rm -rf $RPM_BUILD_ROOT
