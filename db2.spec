@@ -109,7 +109,7 @@ ln -sf ../../lib/libdb2.so.3 $RPM_BUILD_ROOT%{_libdir}/libdb2.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
