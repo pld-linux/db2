@@ -2,7 +2,7 @@ Summary:	BSD database library for C
 Summary(pl):	Biblioteka bazodanowa z BSD dla C
 Name:		db2
 Version:	2.4.14
-Release:	6
+Release:	7
 Group:		Libraries
 License:	BSD
 # Source0:	http://www.berkeleydb.com/update/2.7.7/db-2.7.7.tar.gz
