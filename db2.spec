@@ -5,7 +5,7 @@ Version:	2.4.14
 Release:	7
 Group:		Libraries
 License:	BSD
-# Source0:	http://www.berkeleydb.com/update/2.7.7/db-2.7.7.tar.gz
+# Source0:	http://www.berkeleydb.com/update/snapshot/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
 Source0:	%{name}-glibc-2.1.3.tar.gz
 # Patch to make it standalone
