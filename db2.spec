@@ -5,14 +5,14 @@ Version:	2.4.14
 Release:	8
 Group:		Libraries
 License:	BSD
-# Source0:	http://www.berkeleydb.com/update/snapshot/db-2.7.7.tar.gz
+# alternative site (sometimes working): http://www.berkeleydb.com/
+# Source0:	http://www.sleepycat.com/update/snapshot/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
 Source0:	%{name}-glibc-2.1.3.tar.gz
 # Patch to make it standalone
 Patch0:		%{name}-glibc-2.1.3.patch
 Patch1:		%{name}-libdb2.patch
-URL:		http://www.berkeleydb.com/
-PreReq:		/sbin/ldconfig
+URL:		http://www.sleepycat.com/
 Conflicts:	glibc < 2.1.90
 BuildConflicts:	glibc-db2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
