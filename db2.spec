@@ -1,7 +1,7 @@
 Summary:	BSD database library for C
 Name:		db2
 Version:	2.4.14
-Release:	0.4
+Release:	1
 Group:		Libraries
 License:	BSD
 URL:		http://www.sleepycat.com
@@ -13,6 +13,8 @@ Patch0:		db2-glibc-2.1.3.patch
 Patch1:		db2-libdb2.patch
 PreReq:		/sbin/ldconfig
 Conflicts:	glibc < 2.1.90
+Obsoletes:	glibc-db2
+Provides:	glibc-db2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,6 +29,7 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 Conflicts:	glibc-devel < 2.1.90
+Obsoletes:	glibc-db2-devel
 
 %description devel
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
@@ -44,6 +47,7 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 Conflicts:	glibc-static < 2.1.90
+Obsoletes:	glibc-db2-static
 
 %description static
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
@@ -76,10 +80,7 @@ for p in db_archive db_checkpoint db_deadlock db_dump db_load \
 	install $p $RPM_BUILD_ROOT/%{_bindir}/$q
 done
 
-ln -sf ../../lib/libdb2.so.3 $RPM_BUILD_ROOT/%{_libdir}/libdb.so
 ln -sf ../../lib/libdb2.so.3 $RPM_BUILD_ROOT/%{_libdir}/libdb2.so
-ln -sf libdb2.so $RPM_BUILD_ROOT/%{_libdir}/libndbm.so
-ln -sf libdb2.a $RPM_BUILD_ROOT/%{_libdir}/libndbm.a
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/*
 strip --strip-unneeded $RPM_BUILD_ROOT/lib/lib*.so.*
@@ -101,9 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_includedir}/db2/db.h
 %{_includedir}/db2/db_185.h
-%attr(755,root,root) %{_libdir}/libdb.so
 %attr(755,root,root) %{_libdir}/libdb2.so
-%attr(755,root,root) %{_libdir}/libndbm.so
 %attr(755,root,root) %{_bindir}/db2_archive
 %attr(755,root,root) %{_bindir}/db2_checkpoint
 %attr(755,root,root) %{_bindir}/db2_deadlock
@@ -116,4 +115,3 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libdb2.a
-%{_libdir}/libndbm.a
