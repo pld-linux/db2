@@ -50,7 +50,7 @@ programs which use Berkeley DB.
 %description devel -l pl
 Berkeley Database (Berkeley DB) to zestaw narzêdzi programistycznych
 zapewniaj±cych obs³ugê baz danych w aplikacjach tradycyjnych jak i
-klient-serwer. Berkeley DB obs³ugje dostêp do bazy przez B-drzewa i
+klient-serwer. Berkeley DB obs³uguje dostêp do bazy przez B-drzewa i
 funkcje mieszaj±ce ze sta³± lub zmienn± wielko¶ci± rekordu.
 
 Ten pakiet zawiera pliki nag³ówkowe i dokumentacjê do budowania
@@ -76,7 +76,7 @@ use Berkeley DB.
 %description static -l pl
 Berkeley Database (Berkeley DB) to zestaw narzêdzi programistycznych
 zapewniaj±cych obs³ugê baz danych w aplikacjach tradycyjnych jak i
-klient-serwer. Berkeley DB obs³ugje dostêp do bazy przez B-drzewa i
+klient-serwer. Berkeley DB obs³uguje dostêp do bazy przez B-drzewa i
 funkcje mieszaj±ce ze sta³± lub zmienn± wielko¶ci± rekordu.
 
 Ten pakiet zawiera statyczne biblioteki do budowania programów
