@@ -9,6 +9,7 @@ License:	BSD
 # Source0:	http://www.sleepycat.com/update/snapshot/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
 Source0:	%{name}-glibc-2.1.3.tar.gz
+# Source0-md5:	6e48a57b362f2324831a1751c618c875
 # Patch to make it standalone
 Patch0:		%{name}-glibc-2.1.3.patch
 Patch1:		%{name}-libdb2.patch
