@@ -4,13 +4,6 @@ Name:		db2
 Version:	2.4.14
 Release:	6
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 License:	BSD
 # Source0:	http://www.berkeleydb.com/update/2.7.7/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
@@ -40,13 +33,6 @@ klient-serwer. Ta biblioteka byЁa czЙ╤ci╠ glibc.
 Summary:	Header files for Berkeley database library
 Summary(pl):	Pliki nagЁСwkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Conflicts:	glibc-devel < 2.1.90
 Obsoletes:	glibc-db2-devel
@@ -73,13 +59,6 @@ programСw u©ywaj╠cych Berkeley DB.
 Summary:	Static libraries for Berkeley database library
 Summary(pl):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 Conflicts:	glibc-static < 2.1.90
 Obsoletes:	glibc-db2-static
