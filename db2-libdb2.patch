@@ -1,0 +1,72 @@
+--- db2/Makefile.db2	Wed Jun 28 22:26:17 2000
++++ db2/Makefile	Wed Jun 28 22:28:22 2000
+@@ -17,7 +17,7 @@
+ # Boston, MA 02111-1307, USA.
+ 
+ #
+-#	Makefile for libdb.
++#	Makefile for libdb2.
+ #
+ #	The code is lifted straight from the db 2.3.12 distribution
+ #	with minimal changes.
+@@ -32,11 +32,11 @@
+ 
+ vpath %.c $(subdir-dirs)
+ 
+-extra-libs := libdb
++extra-libs := libdb2
+ extra-libs-others := $(extra-libs)
+ extra-objs = getlong.o
+ 
+-libdb-routines := bt_close bt_compare bt_conv bt_cursor bt_delete \
++libdb2-routines := bt_close bt_compare bt_conv bt_cursor bt_delete \
+ 	bt_open bt_page bt_put bt_rec bt_recno bt_rsearch bt_search \
+ 	bt_split bt_stat btree_auto db db_appinit db_apprec \
+ 	db_auto \
+@@ -57,34 +57,34 @@
+ others2		:= db_checkpoint db_deadlock db_load
+ 
+ CFLAGS += -I. -I./include -include ./compat.h
+-libdb.so-version=.3
++libdb2.so-version=.3
+ objpfx=
+ 
+-all: libdb.a libdb.so$(libdb.so-version) $(extra-objs) $(others) $(others2)
++all: libdb2.a libdb2.so$(libdb2.so-version) $(extra-objs) $(others) $(others2)
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) -c -g -o $@ $<
++	$(CC) $(CFLAGS) -c -o $@ $<
+ %.os: %.c
+ 	$(CC) $(CFLAGS) -c -fpic -o $@ $<
+ 
+-libdb.a: $(patsubst %,%.o,$(libdb-routines))
++libdb2.a: $(patsubst %,%.o,$(libdb2-routines))
+ 	rm -f $@
+ 	ar cq $@ $^
+ 	ranlib $@
+ 
+-libdb.so$(libdb.so-version): $(patsubst %,%.os,$(libdb-routines))
+-	$(CC) -Wl,-O1 -Wl,--version-script=Versions -Wl,-soname=libdb.so$(libdb.so-version) -shared -o $@ $^
+-	ln -sf  $@ libdb.so
++libdb2.so$(libdb2.so-version): $(patsubst %,%.os,$(libdb2-routines))
++	$(CC) -Wl,-O1 -Wl,--version-script=Versions -Wl,-soname=libdb.so$(libdb2.so-version) -shared -o $@ $^
++	ln -sf $@ libdb2.so
+ 
+ $(others): %: %.o
+-	$(CC) -o $@ $< -L. -ldb
++	$(CC) -o $@ $< -L. -ldb2
+ 
+ $(others2): %: %.o
+-	$(CC) -o $@ $< $(extra-objs) -L. -ldb
++	$(CC) -o $@ $< $(extra-objs) -L. -ldb2
+ 
+ clean:
+-	rm -f $(patsubst %,%.o,$(libdb-routines))
+-	rm -f $(patsubst %,%.os,$(libdb-routines))
++	rm -f $(patsubst %,%.o,$(libdb2-routines))
++	rm -f $(patsubst %,%.os,$(libdb2-routines))
+ 	rm -f $(extra-objs) *~ $(others) $(others2)
+-	rm -f libdb.a libdb.so libdb.so$(libdb.so-version)
++	rm -f libdb2.a libdb2.so libdb2.so$(libdb2.so-version)
+ 	rm -f $(patsubst %,%.o,$(others) $(others2))
