@@ -12,13 +12,13 @@ Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
 License:	BSD
-URL:		http://www.sleepycat.com
-# Source0:	http://www.sleepycat.com/update/2.7.7/db-2.7.7.tar.gz
+# Source0:	http://www.berkeleydb.com/update/2.7.7/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
 Source0:	%{name}-glibc-2.1.3.tar.gz
 # Patch to make it standalone
 Patch0:		%{name}-glibc-2.1.3.patch
 Patch1:		%{name}-libdb2.patch
+URL:		http://www.berkeleydb.com/
 PreReq:		/sbin/ldconfig
 Conflicts:	glibc < 2.1.90
 BuildConflicts:	glibc-db2
