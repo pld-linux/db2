@@ -6,7 +6,8 @@ Release:	8
 Group:		Libraries
 License:	BSD
 # alternative site (sometimes working): http://www.berkeleydb.com/
-# Source0:	http://www.sleepycat.com/update/snapshot/db-2.7.7.tar.gz
+# Source0Download: http://dev.sleepycat.com/downloads/releasehistorybdb.html
+# Source0:	http://downloads.sleepycat.com/db-2.7.7.tar.gz
 # Taken from glibc 2.1.3
 Source0:	%{name}-glibc-2.1.3.tar.gz
 # Source0-md5:	6e48a57b362f2324831a1751c618c875
@@ -34,7 +35,7 @@ klient-serwer. Ta biblioteka by³a czê¶ci± glibc.
 Summary:	Header files for Berkeley database library
 Summary(pl):	Pliki nag³ówkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	glibc-devel < 2.1.90
 Obsoletes:	glibc-db2-devel
 
@@ -60,7 +61,7 @@ programów u¿ywaj±cych Berkeley DB.
 Summary:	Static libraries for Berkeley database library
 Summary(pl):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	glibc-static < 2.1.90
 Obsoletes:	glibc-db2-static
 
