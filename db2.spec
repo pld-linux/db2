@@ -1,5 +1,5 @@
 Summary:	BSD database library for C
-Summary(pl.UTF-8):   Biblioteka bazodanowa z BSD dla C
+Summary(pl.UTF-8):	Biblioteka bazodanowa z BSD dla C
 Name:		db2
 Version:	2.4.14
 Release:	8
@@ -33,7 +33,7 @@ klient-serwer. Ta biblioteka była częścią glibc.
 
 %package devel
 Summary:	Header files for Berkeley database library
-Summary(pl.UTF-8):   Pliki nagłówkowe do biblioteki Berkeley Database
+Summary(pl.UTF-8):	Pliki nagłówkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	glibc-db2-devel
@@ -59,7 +59,7 @@ programów używających Berkeley DB.
 
 %package static
 Summary:	Static libraries for Berkeley database library
-Summary(pl.UTF-8):   Statyczne biblioteki Berkeley Database
+Summary(pl.UTF-8):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	glibc-db2-static
